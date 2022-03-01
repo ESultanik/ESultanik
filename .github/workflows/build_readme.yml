@@ -1,0 +1,31 @@
+name: Rebuild the README
+
+on:
+  push:
+    branches:
+      - *
+
+jobs:
+  deploydocs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y gpp
+      - name: Rebuild the README
+        run: |
+          make
+      - name: Commit README changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Update README.md for ${GITHUB_REF}" -a || true
+          # The above command will fail if no changes were present, so we ignore
+          # the return code.
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
