@@ -2,8 +2,7 @@ name: Rebuild the README
 
 on:
   push:
-    branches:
-      - *
+    branches: *
 
 jobs:
   deploydocs:
