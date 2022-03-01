@@ -1,0 +1,15 @@
+<#defeval LT|\<>
+<#defeval RT|\>>
+<#define GitHub|[![GitHub](https://img.shields.io/badge/repo--brightgreen?style=social&logo=github)](https://github.com/#1/#2)
+![GitHub Stars](https://img.shields.io/github/stars/#1/#2?style=social)>
+<#define License|[![License](https://img.shields.io/github/license/#1/#2)](https://github.com/#1/#2/blob/master/LICENSE)>
+<#define Project|<#GitHub #1|#2>
+<#License #1|#2>>
+<#define PythonProject|<#GitHub #1|#2>
+[![PyPI Downloads](https://img.shields.io/pypi/dm/#2?label=PyPI%20Downloads)](/project/<#ifeq #3|>#2<#else>#3<#endif>/)
+<#License #1|#2>>
+<#define Role|<#LT>span style="float:right"<#RT>![#1](https://img.shields.io/badge/-#1-brightgreen?cacheSeconds=604800) <#LT>/span<#RT>>
+<#defeval CoCreator|<#Role co%E2%80%91creator>>
+<#defeval Creator|<#Role creator>>
+<#defeval Maintainer|<#Role maintainer>>
+<#defeval Contributor|<#Role contributor>>
