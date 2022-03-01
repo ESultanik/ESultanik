@@ -1,8 +1,6 @@
 name: Rebuild the README
 
-on:
-  push:
-    branches: *
+on: push
 
 jobs:
   deploydocs:
