@@ -3,7 +3,7 @@ name: Rebuild the README
 on: push
 
 jobs:
-  deploydocs:
+  rebuildreadme:
     runs-on: ubuntu-latest
 
     steps:
