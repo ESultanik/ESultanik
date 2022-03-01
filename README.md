@@ -222,6 +222,8 @@ developers to find vulnerabilities, enhance their code comprehension, and quickl
 [![License](https://img.shields.io/github/license/crytic/eth-security-toolbox)](https://github.com/crytic/eth-security-toolbox/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/trailofbits/eth-security-toolbox)](https://hub.docker.com/r/trailofbits/eth-security-toolbox)
 
+This is a Docker container I built that is preconfigured and automatically updated with the latest Ethereum security 
+tooling.
 
 ### Echidna
 
